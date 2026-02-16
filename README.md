@@ -1,1 +1,1 @@
-# Web_Application_Attack_and_Defense
+# PrestaShop LAMP Stack Setup & Security Testing
