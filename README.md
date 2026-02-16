@@ -1,4 +1,4 @@
-![Screenshot 2026-02-09 173645](https://github.com/user-attachments/assets/0e455efa-747f-4221-95f7-b9044ccdc5c5)# PrestaShop LAMP Stack Setup & Security Testing
+# PrestaShop LAMP Stack Setup & Security Testing
 
 ## Overview
 
