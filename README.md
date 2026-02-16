@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project summarizes the complete setup, configuration, troubleshooting, and security testing process for deploying PrestaShop on a LAMP stack.
+This project summarizes the complete setup, configuration, troubleshooting, and security testing process for deploying PrestaShop on a LAMP stack before and after security configuration.
 
 ### Components Used
 
