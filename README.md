@@ -1,4 +1,4 @@
-# PrestaShop LAMP Stack Setup & Security Testing
+# PrestaShop Stack Setup & Security Testing
 
 ## Overview
 
