@@ -1,4 +1,4 @@
-# PrestaShop LAMP Stack Setup & Security Testing
+![Screenshot 2026-02-09 173645](https://github.com/user-attachments/assets/0e455efa-747f-4221-95f7-b9044ccdc5c5)# PrestaShop LAMP Stack Setup & Security Testing
 
 ## Overview
 
@@ -6,13 +6,12 @@ This project summarizes the complete setup, configuration, troubleshooting, and 
 
 ### Components Used
 
-- Apache HTTP Server
-- MariaDB
-- PHP
-- PrestaShop
-- ModSecurity
-- OWASP Core Rule Set (CRS)
-- OWASP ZAP
+- `Apache HTTP Server`
+- `MariaDB`
+- `PrestaShop`
+- `ModSecurity`
+- `OWASP Core Rule Set (CRS)`
+- `OWASP ZAP`
 
 ---
 
@@ -35,12 +34,16 @@ sudo systemctl status apache2
 sudo a2enmod rewrite
 sudo systemctl restart apache2
 ```
+
+![Screenshot 2026-02-09 002914](https://github.com/user-attachments/assets/c110166c-05f0-422a-b986-8a7b5b8847e0)
 ---
 ## 2. MariaDB Installation & Configuration
 ```
 sudo apt install mariadb-server mariadb-client
 sudo mysql_secure_installation
 ```
+
+![Screenshot 2026-02-09 004309](https://github.com/user-attachments/assets/1ce92d68-5f16-4148-82c7-8aa395023196)
 ---
 ## 3. PrestaShop Installation
 **Download & Extract**
@@ -70,6 +73,11 @@ sudo systemctl reload apache2
 ```
 http://localhost/prestashop
 ```
+
+![Screenshot 2026-02-09 020902](https://github.com/user-attachments/assets/74ac7ac6-5289-4804-89b7-27b0674b5faf)
+
+---
+
 ## 4. OWASP ZAP Installation & Configuration
 **Install ZAP**
 ```
@@ -82,10 +90,11 @@ http://localhost/prestashop
 **Run:**
 `Spider scan`
 `Active scan`
-Review alerts and findings
+**Review alerts and findings**
+
+![Screenshot 2026-02-09 173645](https://github.com/user-attachments/assets/5e5c419c-ecdc-4fc7-936f-a3c7e0b7e4af)
 
 ---
-
 ## 5. Install Modsecurity (For Hardening)
 
 **Install and Enable**
@@ -122,6 +131,8 @@ sudo nano /etc/modsecurity/prestashop-auth-exclusions.conf
 
 </IfModule>
 ```
+![WAFrule](https://github.com/user-attachments/assets/86073fe9-6207-432c-a273-00345a8b4625)
+
 ---
 ## 6. Security Validation (OWASP ZAP)
 **After enabling Modsecurity for apache, run Owasp zap again to check for vulnerabilities**
