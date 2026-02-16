@@ -41,6 +41,7 @@ sudo systemctl restart apache2
 sudo apt install mariadb-server mariadb-client
 sudo mysql_secure_installation
 ```
+---
 ## 3. PrestaShop Installation
 **Download & Extract**
 ```
@@ -64,4 +65,8 @@ sudo chown -R www-data:www-data /var/www/html/prestashop
 ```
 sudo a2ensite prestashop.conf
 sudo systemctl reload apache2
+```
+**Open browser, navigate to:**
+```
+http://localhost/prestashop
 ```
