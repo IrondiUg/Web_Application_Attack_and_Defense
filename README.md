@@ -41,3 +41,27 @@ sudo systemctl restart apache2
 sudo apt install mariadb-server mariadb-client
 sudo mysql_secure_installation
 ```
+## 3. PrestaShop Installation
+Download & Extract
+```
+wget https://download.prestashop.com/download/releases/prestashop_*.zip
+unzip prestashop_*.zip -d /var/www/html/prestashop
+sudo chown -R www-data:www-data /var/www/html/prestashop
+```
+Configure Apache Virtual Host
+```
+<VirtualHost *:80>
+    ServerName yourdomain.com
+    DocumentRoot /var/www/html/prestashop
+
+    <Directory /var/www/html/prestashop/>
+        AllowOverride All
+        Require all granted
+    </Directory>
+</VirtualHost>
+```
+Enable site
+```
+sudo a2ensite prestashop.conf
+sudo systemctl reload apache2
+```
