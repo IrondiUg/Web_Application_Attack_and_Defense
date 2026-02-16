@@ -1,0 +1,22 @@
+<IfModule security2_module>
+
+    # PrestaShop login & registration
+    <LocationMatch "/(authentication|login|register|connexion|index\.php)">
+        SecRuleRemoveById 941100
+        SecRuleRemoveById 941130
+        SecRuleRemoveById 941160
+        SecRuleRemoveById 942100
+        SecRuleRemoveById 942200
+    </LocationMatch>
+<IfModule security2_module>
+
+    # Exclude login/register pages from CRS rules that block IP URLs
+    <LocationMatch "/prestashop/(login|authentication|register)">
+        SecRuleRemoveById 931100
+        SecRuleRemoveById 920350
+    </LocationMatch>
+
+</IfModule>
+
+</IfModule>
+
