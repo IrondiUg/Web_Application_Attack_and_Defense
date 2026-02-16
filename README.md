@@ -88,8 +88,11 @@ sudo apt install zaproxy
 http://localhost/prestashop
 ```
 **Run:**
+
 `Spider scan`
+
 `Active scan`
+
 **Review alerts and findings**
 
 ![Screenshot 2026-02-09 173645](https://github.com/user-attachments/assets/5e5c419c-ecdc-4fc7-936f-a3c7e0b7e4af)
@@ -137,9 +140,9 @@ sudo nano /etc/modsecurity/prestashop-auth-exclusions.conf
 ## 6. Security Validation (OWASP ZAP)
 **After enabling Modsecurity for apache, run Owasp zap again to check for vulnerabilities**
 
-***screenshot after***
+![Screenshot 2026-02-12 042639](https://github.com/user-attachments/assets/fe2b4e27-a9ca-4cac-8085-aafbda967b4e)
 
-
+---
 ## Final Results
 
 - **SQL Injection** `Blocked`
