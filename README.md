@@ -70,3 +70,86 @@ sudo systemctl reload apache2
 ```
 http://localhost/prestashop
 ```
+## 4. OWASP ZAP Installation & Configuration
+**Install ZAP**
+```
+sudo apt install zaproxy
+```
+**Set target URL to:**
+```
+http://localhost/prestashop
+```
+**Run:**
+`Spider scan`
+`Active scan`
+Review alerts and findings
+
+---
+
+## 5. Install Modsecurity (For Hardening)
+
+**Install and Enable**
+```
+sudo apt install libapache2-mod-security2
+sudo a2enmod security2
+sudo systemctl restart apache2
+```
+**Configure OWASP CRS**
+```
+sudo cp /usr/share/coreruleset/crs-setup.conf.example \
+/usr/share/modsecurity-crs/crs-setup.conf
+```
+**Enable blocking mode in ModSecurity:**
+```
+SecRuleEngine On
+```
+**Validate configuration:**
+```
+sudo apachectl configtest
+```
+**Create exclusion file**
+```
+sudo nano /etc/modsecurity/prestashop-auth-exclusions.conf
+```
+**Add scoped rule removal**
+```
+<IfModule security2_module>
+
+    <LocationMatch "/prestashop/(login|authentication|register)">
+        SecRuleRemoveById 931100
+        SecRuleRemoveById 920350
+    </LocationMatch>
+
+</IfModule>
+```
+---
+## 6. Security Validation (OWASP ZAP)
+**After enabling Modsecurity for apache, run Owasp zap again to check for vulnerabilities**
+
+***screenshot after***
+
+
+## Final Results
+
+- **SQL Injection** `Blocked`
+- **Login Functionality** `Working`
+- **Registration** `Working`
+- **WAF Engine** `Active`
+- **Audit Logging** `Enabled`
+
+---
+## Conclusion
+The PrestaShop application was successfully hardened using ModSecurity and OWASP CRS.
+Malicious requests are blocked while legitimate users can authenticate without disruption. The system demonstrates proper WAF implementation, tuning, and validation practices.
+
+
+
+
+
+
+
+
+
+
+
+
