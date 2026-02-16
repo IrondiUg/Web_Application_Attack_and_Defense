@@ -18,19 +18,19 @@ This project summarizes the complete setup, configuration, troubleshooting, and 
 
 ## 1. Apache Installation & Configuration
 
-### Install Apache
+**Install Apache**
 
 ```
 sudo apt update
 sudo apt install apache2 PrestaShop LAMP Stack Setup & Security Testing
 ```
-### Enable & Start Apache
+**Enable & Start Apache**
 ```
 sudo systemctl enable apache2
 sudo systemctl start apache2
 sudo systemctl status apache2
 ```
-### Enable Required Modules
+**Enable Required Modules**
 ```
 sudo a2enmod rewrite
 sudo systemctl restart apache2
@@ -42,13 +42,13 @@ sudo apt install mariadb-server mariadb-client
 sudo mysql_secure_installation
 ```
 ## 3. PrestaShop Installation
-Download & Extract
+**Download & Extract**
 ```
 wget https://download.prestashop.com/download/releases/prestashop_*.zip
 unzip prestashop_*.zip -d /var/www/html/prestashop
 sudo chown -R www-data:www-data /var/www/html/prestashop
 ```
-Configure Apache Virtual Host
+**Configure Apache Virtual Host**
 ```
 <VirtualHost *:80>
     ServerName yourdomain.com
@@ -60,7 +60,7 @@ Configure Apache Virtual Host
     </Directory>
 </VirtualHost>
 ```
-Enable site
+**Enable site**
 ```
 sudo a2ensite prestashop.conf
 sudo systemctl reload apache2
