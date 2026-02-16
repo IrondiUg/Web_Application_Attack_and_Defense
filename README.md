@@ -20,8 +20,24 @@ This project summarizes the complete setup, configuration, troubleshooting, and 
 
 ### Install Apache
 
-```bash
+```
 sudo apt update
 sudo apt install apache2 PrestaShop LAMP Stack Setup & Security Testing
 ```
-#
+### Enable & Start Apache
+```
+sudo systemctl enable apache2
+sudo systemctl start apache2
+sudo systemctl status apache2
+```
+### Enable Required Modules
+```
+sudo a2enmod rewrite
+sudo systemctl restart apache2
+```
+---
+## 2. MariaDB Installation & Configuration
+```
+sudo apt install mariadb-server mariadb-client
+sudo mysql_secure_installation
+```
