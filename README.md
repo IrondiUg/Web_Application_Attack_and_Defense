@@ -143,7 +143,7 @@ sudo nano /etc/modsecurity/prestashop-auth-exclusions.conf
 ![Screenshot 2026-02-12 042639](https://github.com/user-attachments/assets/fe2b4e27-a9ca-4cac-8085-aafbda967b4e)
 
 ---
-## Final Results
+## 7. Final Results
 
 - **SQL Injection** `Blocked`
 - **Login Functionality** `Working`
