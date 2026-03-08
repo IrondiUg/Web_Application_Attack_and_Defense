@@ -4,7 +4,7 @@
 
 This project summarizes the complete setup, configuration, troubleshooting, and security testing process for deploying PrestaShop before and after security configuration.
 
-NOTE: ALL COMMANDS AND INSTALLATION STEPS ARE LINUX-VASED
+NOTE: ALL COMMANDS AND INSTALLATION STEPS ARE LINUX-BASED
 
 ### Components Used
 
