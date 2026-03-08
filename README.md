@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project summarizes the complete setup, configuration, troubleshooting, and security testing process for deploying PrestaShop stack before and after security configuration.
+This project summarizes the complete setup, configuration, troubleshooting, and security testing process for deploying PrestaShop before and after security configuration.
 
 ### Components Used
 
