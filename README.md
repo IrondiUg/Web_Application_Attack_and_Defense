@@ -146,12 +146,15 @@ sudo nano /etc/modsecurity/prestashop-auth-exclusions.conf
 
 ---
 ## 7. Final Results
+### Attack Prevention
 
-- **SQL Injection** `Blocked`
-- **Login Functionality** `Working`
-- **Registration** `Working`
-- **WAF Engine** `Active`
-- **Audit Logging** `Enabled`
+| Attack Type | Status |
+|------------|--------|
+| SQL Injection | ✅ BLOCKED |
+| Cross-Site Scripting (XSS) | ✅ BLOCKED |
+| Command Injection | ✅ BLOCKED |
+| CSRF Attacks | ✅ MITIGATED |
+| File Inclusion | ✅ BLOCKED |
 
 ---
 ## Conclusion
