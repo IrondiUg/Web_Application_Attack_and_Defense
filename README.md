@@ -15,6 +15,17 @@ This project summarizes the complete setup, configuration, troubleshooting, and 
 - `OWASP Core Rule Set (CRS)`
 - `OWASP ZAP`
 
+## System Requirements
+### Hardware Requirements
+- **CPU**: 2 cores minimum (4 cores recommended)
+- **RAM**: 2GB minimum (4GB recommended)
+- **Storage**: 20GB free disk space
+- **Network**: Internet connectivity for package downloads
+
+### Software Requirements
+- **OS**: Ubuntu 20.04 LTS or Debian 10+
+- **Root/Sudo**: Administrative privileges required
+- **Browser**: Modern browser for PrestaShop interface and OWASP ZAP GUI
 ---
 
 ## 1. Apache Installation & Configuration
